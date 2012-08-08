@@ -14,9 +14,9 @@ import android.util.Log;
  * Helper class for Android SQLiteDatabase
  * @param <T>
  */
-public class RepositoryBase<T> {
+public class CrudRepository<T> {
 	
-	private static final String LOG_TAG = "RepositoryBase";
+	private static final String LOG_TAG = "CrudRepository";
 	
 	private final IEntityMapper<T> mapper;
 	protected final SQLiteDatabase db;
@@ -26,7 +26,7 @@ public class RepositoryBase<T> {
 	 * @param db
 	 * @param mapper
 	 */
-	protected RepositoryBase(final SQLiteDatabase db, final IEntityMapper<T> mapper) {
+	protected CrudRepository(final SQLiteDatabase db, final IEntityMapper<T> mapper) {
 		this.mapper = mapper;
 		this.db = db;
 	}
